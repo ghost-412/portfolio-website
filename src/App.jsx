@@ -72,9 +72,9 @@ export default function App() {
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '1rem' }}>
             <div>
               <span style={{ fontSize: '0.8rem', backgroundColor: '#2E1065', color: '#C084FC', padding: '0.25rem 0.75rem', borderRadius: '9999px', fontWeight: '600' }}>Python / CI-CD</span>
-              <h3 style={{ fontSize: '1.5rem', margin: '0.5rem 0 0 0' }}>DevOps Python Lab</h3>
+              <h3 style={{ fontSize: '1.5rem', margin: '0.5rem 0 0 0' }}>MLOps Pipeline Automation</h3>
             </div>
-            <a href="https://github.com/ghost-412/DevOps-Python-Lab" target="_blank" rel="noreferrer" style={{ color: '#A78BFA', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.25rem', fontSize: '0.95rem' }}>
+            <a href="https://github.com/ghost-412/MLOps-Pipeline-Automation" target="_blank" rel="noreferrer" style={{ color: '#A78BFA', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.25rem', fontSize: '0.95rem' }}>
               View Repository <ExternalLink size={16} />
             </a>
           </div>
