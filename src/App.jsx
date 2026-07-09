@@ -67,7 +67,7 @@ export default function App() {
 
       {/* Projects Section */}
       <section id="projects" style={{ padding: '4rem 2rem', maxWidth: '1000px', margin: '0 auto' }}>
-        <h2 style={{ fontSize: '2rem', marginBottom: '2rem', color: '#A78BFA', borderLeft: '4px solid #6D28D9', paddingLeft: '0.75rem' }}>Featured Engineering</h2>
+        <h2 style={{ fontSize: '2rem', marginBottom: '2rem', color: '#A78BFA', borderLeft: '4px solid #6D28D9', paddingLeft: '0.75rem' }}>Featured Projects</h2>
         <div style={{ background: '#0F0E1C', border: '1px solid #231E39', borderRadius: '1rem', padding: '2rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '1rem' }}>
             <div>
