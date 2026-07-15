@@ -93,7 +93,7 @@ export default function App() {
               <ul style={{ color: '#9CA3AF', fontSize: '0.85rem', paddingLeft: '1.2rem', marginTop: '0.5rem', lineHeight: '1.5' }}>
                 <li><strong>Continuous Features:</strong> Two-Sample Kolmogorov-Smirnov (KS-Test) checks continuous distribution divergence.</li>
                 <li><strong>Categorical Features:</strong> Chi-Square ($\chi^2$) Contingency testing utilizing Laplace smoothing ($+0.5$) for bin alignment and stability.</li>
-                <li><strong>Population Stability Index (PSI):</strong> Projects data over 10 equal-frequency baseline buckets with logarithmic safety offsets ($\epsilon = 10^{-4}$) to trigger retrains when $PSI > 0.2$.</li>
+                <li><strong>Population Stability Index (PSI):</strong> Projects data over 10 equal-frequency baseline buckets with logarithmic safety offsets ($\epsilon = 10^{-4}$) to trigger retrains when $PSI &gt 0.2$.</li>
               </ul>
             </div>
 
@@ -105,8 +105,8 @@ export default function App() {
                 Runs instant multi-layered diagnostic checks prior to running intensive statistical sweeps:
               </p>
               <ul style={{ color: '#9CA3AF', fontSize: '0.85rem', paddingLeft: '1.2rem', marginTop: '0.5rem', lineHeight: '1.5' }}>
-                <li><strong>Thresholded Null Alerts:</strong> Flags and halts drift runs on columns exceeding $40\%$ missing rates, recommending specific median/placeholder imputations.</li>
-                <li><strong>Outliers & Skews:</strong> Implements Interquartile Range boundary evaluations ($1.5 \times IQR$) to catch outliers and flags target class imbalance skew exceeding $75\%$.</li>
+                <li><strong>Thresholded Null Alerts:</strong> Flags and halts drift runs on columns exceeding 40% missing rates, recommending specific median/placeholder imputations.</li>
+                <li><strong>Outliers &amp; Skews:</strong> Implements Interquartile Range boundary evaluations (1.5 &times; IQR) to catch outliers and flags target class imbalance skew exceeding 75%.</li>
                 <li><strong>Metadata Filtering:</strong> Runs regex constraints to identify non-predictive tracking keys alongside row redundancy diagnostics.</li>
               </ul>
             </div>
