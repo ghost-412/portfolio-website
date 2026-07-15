@@ -64,24 +64,61 @@ export default function App() {
 
       <section id="projects" style={{ padding: '4rem 2rem', maxWidth: '1000px', margin: '0 auto' }}>
         <h2 style={{ fontSize: '2rem', marginBottom: '2rem', color: '#A78BFA', borderLeft: '4px solid #6D28D9', paddingLeft: '0.75rem' }}>Featured Projects</h2>
-        <div style={{ background: '#0F0E1C', border: '1px solid #231E39', borderRadius: '1rem', padding: '2rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+        <div style={{ background: '#0F0E1C', border: '1px solid #231E39', borderRadius: '1rem', padding: '2rem', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+          
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '1rem' }}>
             <div>
-              <span style={{ fontSize: '0.8rem', backgroundColor: '#2E1065', color: '#C084FC', padding: '0.25rem 0.75rem', borderRadius: '9999px', fontWeight: '600' }}>Python / MLOps</span>
-              <h3 style={{ fontSize: '1.5rem', margin: '0.5rem 0 0 0' }}>DataDoc AI / Caliber AI</h3>
+              <span style={{ fontSize: '0.8rem', backgroundColor: '#2E1065', color: '#C084FC', padding: '0.25rem 0.75rem', borderRadius: '9999px', fontWeight: '600', marginRight: '0.5rem' }}>Python / MLOps</span>
+              <span style={{ fontSize: '0.8rem', backgroundColor: '#064E3B', color: '#34D399', padding: '0.25rem 0.75rem', borderRadius: '9999px', fontWeight: '600' }}>Lightweight Engine</span>
+              <h3 style={{ fontSize: '1.5rem', margin: '0.75rem 0 0 0' }}>DataDoc AI / Caliber AI</h3>
             </div>
             <a href="https://github.com/ghost-412" target="_blank" rel="noreferrer" style={{ color: '#A78BFA', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.25rem', fontSize: '0.95rem' }}>
               View Repository <ExternalLink size={16} />
             </a>
           </div>
+
           <p style={{ color: '#9CA3AF', margin: 0, lineHeight: '1.6' }}>
-            A comprehensive machine learning operations web application engineered for detailed dataset health profiling and data drift monitoring. Built with Streamlit in a Python environment, featuring a top-mounted interactive navigation toggle (🩺 for DataDoc / 🎯 for Caliber) to seamlessly transition between statistical data profiling and standard engineering frameworks.
+            A high-performance MLOps telemetry platform engineered to monitor dataset integrity and detect silent model degradation. Avoiding the footprint of bloated enterprise testing suites, I designed and built a <strong>100% custom validation and statistical engine</strong> entirely in in-memory vectorized Pandas, NumPy, and SciPy to process production data batches against golden baseline datasets in real-time.
           </p>
-          <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginTop: '0.5rem' }}>
-            {['Streamlit', 'Python 3.8', 'Pandas', 'Data Drift', 'WSL'].map((tech) => (
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.25rem', margin: '0.5rem 0' }}>
+            
+            <div style={{ background: '#141226', padding: '1.25rem', borderRadius: '0.5rem', border: '1px solid #231E39' }}>
+              <h4 style={{ color: '#C084FC', margin: '0 0 0.5rem 0', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                🎯 Caliber AI: Statistical Drift
+              </h4>
+              <p style={{ color: '#9CA3AF', fontSize: '0.9rem', margin: 0, lineHeight: '1.5' }}>
+                Executes type-aware mathematical divergence telemetry with sample-size safeguards ($N \ge 30$):
+              </p>
+              <ul style={{ color: '#9CA3AF', fontSize: '0.85rem', paddingLeft: '1.2rem', marginTop: '0.5rem', lineHeight: '1.5' }}>
+                <li><strong>Continuous Features:</strong> Two-Sample Kolmogorov-Smirnov (KS-Test) checks continuous distribution divergence.</li>
+                <li><strong>Categorical Features:</strong> Chi-Square ($\chi^2$) Contingency testing utilizing Laplace smoothing ($+0.5$) for bin alignment and stability.</li>
+                <li><strong>Population Stability Index (PSI):</strong> Projects data over 10 equal-frequency baseline buckets with logarithmic safety offsets ($\epsilon = 10^{-4}$) to trigger retrains when $PSI > 0.2$.</li>
+              </ul>
+            </div>
+
+            <div style={{ background: '#141226', padding: '1.25rem', borderRadius: '0.5rem', border: '1px solid #231E39' }}>
+              <h4 style={{ color: '#818CF8', margin: '0 0 0.5rem 0', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                🩺 DataDoc AI: Diagnostic Health
+              </h4>
+              <p style={{ color: '#9CA3AF', fontSize: '0.9rem', margin: 0, lineHeight: '1.5' }}>
+                Runs instant multi-layered diagnostic checks prior to running intensive statistical sweeps:
+              </p>
+              <ul style={{ color: '#9CA3AF', fontSize: '0.85rem', paddingLeft: '1.2rem', marginTop: '0.5rem', lineHeight: '1.5' }}>
+                <li><strong>Thresholded Null Alerts:</strong> Flags and halts drift runs on columns exceeding $40\%$ missing rates, recommending specific median/placeholder imputations.</li>
+                <li><strong>Outliers & Skews:</strong> Implements Interquartile Range boundary evaluations ($1.5 \times IQR$) to catch outliers and flags target class imbalance skew exceeding $75\%$.</li>
+                <li><strong>Metadata Filtering:</strong> Runs regex constraints to identify non-predictive tracking keys alongside row redundancy diagnostics.</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+            {['SciPy (Stats)', 'Vectorized Pandas', 'NumPy', 'Streamlit', 'Statistical Drift', 'Data Validation'].map((tech) => (
               <span key={tech} style={{ fontSize: '0.85rem', color: '#9CA3AF', backgroundColor: '#141226', padding: '0.25rem 0.5rem', borderRadius: '0.25rem', border: '1px solid #231E39' }}>{tech}</span>
             ))}
           </div>
+
         </div>
       </section>
 
