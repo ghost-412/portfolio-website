@@ -88,12 +88,12 @@ export default function App() {
                 🎯 Caliber AI: Statistical Drift
               </h4>
               <p style={{ color: '#9CA3AF', fontSize: '0.9rem', margin: 0, lineHeight: '1.5' }}>
-                Executes type-aware mathematical divergence telemetry with sample-size safeguards ($N \ge 30$):
+                Executes type-aware mathematical divergence telemetry with sample-size safeguards (N &ge; 30):
               </p>
               <ul style={{ color: '#9CA3AF', fontSize: '0.85rem', paddingLeft: '1.2rem', marginTop: '0.5rem', lineHeight: '1.5' }}>
                 <li><strong>Continuous Features:</strong> Two-Sample Kolmogorov-Smirnov (KS-Test) checks continuous distribution divergence.</li>
-                <li><strong>Categorical Features:</strong> Chi-Square ($\chi^2$) Contingency testing utilizing Laplace smoothing ($+0.5$) for bin alignment and stability.</li>
-                <li><strong>Population Stability Index (PSI):</strong> Projects data over 10 equal-frequency baseline buckets with logarithmic safety offsets ($\epsilon = 10^{-4}$) to trigger retrains when $PSI &gt 0.2$.</li>
+                <li><strong>Categorical Features:</strong> Chi-Square (&chi;&sup2;) Contingency testing utilizing Laplace smoothing (+0.5) for bin alignment and stability.</li>
+                <li><strong>Population Stability Index (PSI):</strong> Projects data over 10 equal-frequency baseline buckets with logarithmic safety offsets (&epsilon; = 10&supminus;&sup4;) to trigger retrains when PSI &gt; 0.2.</li>
               </ul>
             </div>
 
