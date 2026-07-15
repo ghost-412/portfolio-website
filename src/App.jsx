@@ -72,9 +72,18 @@ export default function App() {
               <span style={{ fontSize: '0.8rem', backgroundColor: '#064E3B', color: '#34D399', padding: '0.25rem 0.75rem', borderRadius: '9999px', fontWeight: '600' }}>Lightweight Engine</span>
               <h3 style={{ fontSize: '1.5rem', margin: '0.75rem 0 0 0' }}>DataDoc AI / Caliber AI</h3>
             </div>
-            <a href="https://github.com/ghost-412" target="_blank" rel="noreferrer" style={{ color: '#A78BFA', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.25rem', fontSize: '0.95rem' }}>
-              View Repository <ExternalLink size={16} />
-            </a>
+            
+            <div style={{ display: 'flex', gap: '1.25rem', alignItems: 'center', flexWrap: 'wrap' }}>
+              <a href="https://github.com/ghost-412/portfolio-website" target="_blank" rel="noreferrer" style={{ color: '#A78BFA', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.25rem', fontSize: '0.95rem' }}>
+                View Repository <ExternalLink size={16} />
+              </a>
+              <a href="https://datadoc-caliber-ai-majbvgfjknzfchhslnjnds.streamlit.app/" target="_blank" rel="noreferrer" style={{ backgroundColor: '#6D28D9', color: '#fff', padding: '0.5rem 1rem', borderRadius: '0.375rem', textDecoration: 'none', fontWeight: '600', fontSize: '0.9rem', display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}>
+                Check It Out
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
           </div>
 
           <p style={{ color: '#9CA3AF', margin: 0, lineHeight: '1.6' }}>
