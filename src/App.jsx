@@ -5,7 +5,6 @@ export default function App() {
   return (
     <div style={{ backgroundColor: '#0B0A12', color: '#F3F4F6', minHeight: '100vh', fontFamily: 'sans-serif' }}>
 
-      {/* Navbar */}
       <nav style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1.5rem 2rem', borderBottom: '1px solid #231E39', background: '#0F0E1C' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 'bold', fontSize: '1.25rem', color: '#A78BFA' }}>
           <Terminal size={22} />
@@ -18,7 +17,6 @@ export default function App() {
         </div>
       </nav>
 
-      {/* Hero / About Section */}
       <header id="about" style={{ padding: '6rem 2rem', maxWidth: '1000px', margin: '0 auto', textAlign: 'center' }}>
         <h1 style={{ fontSize: '3.5rem', fontWeight: '800', marginBottom: '1.5rem', background: 'linear-gradient(to right, #C084FC, #818CF8)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
           Hello, I am Sharjeel
@@ -41,7 +39,6 @@ export default function App() {
         </div>
       </header>
 
-      {/* Skills Section */}
       <section id="skills" style={{ backgroundColor: '#0F0E1C', padding: '4rem 2rem', borderTop: '1px solid #231E39', borderBottom: '1px solid #231E39' }}>
         <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
           <h2 style={{ fontSize: '2rem', marginBottom: '2rem', color: '#A78BFA', borderLeft: '4px solid #6D28D9', paddingLeft: '0.75rem' }}>Core Capabilities</h2>
@@ -65,31 +62,29 @@ export default function App() {
         </div>
       </section>
 
-      {/* Projects Section */}
       <section id="projects" style={{ padding: '4rem 2rem', maxWidth: '1000px', margin: '0 auto' }}>
         <h2 style={{ fontSize: '2rem', marginBottom: '2rem', color: '#A78BFA', borderLeft: '4px solid #6D28D9', paddingLeft: '0.75rem' }}>Featured Projects</h2>
         <div style={{ background: '#0F0E1C', border: '1px solid #231E39', borderRadius: '1rem', padding: '2rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '1rem' }}>
             <div>
-              <span style={{ fontSize: '0.8rem', backgroundColor: '#2E1065', color: '#C084FC', padding: '0.25rem 0.75rem', borderRadius: '9999px', fontWeight: '600' }}>Python / CI-CD</span>
-              <h3 style={{ fontSize: '1.5rem', margin: '0.5rem 0 0 0' }}>MLOps Pipeline Automation</h3>
+              <span style={{ fontSize: '0.8rem', backgroundColor: '#2E1065', color: '#C084FC', padding: '0.25rem 0.75rem', borderRadius: '9999px', fontWeight: '600' }}>Python / MLOps</span>
+              <h3 style={{ fontSize: '1.5rem', margin: '0.5rem 0 0 0' }}>DataDoc AI / Caliber AI</h3>
             </div>
-            <a href="https://github.com/ghost-412/MLOps-Pipeline-Automation" target="_blank" rel="noreferrer" style={{ color: '#A78BFA', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.25rem', fontSize: '0.95rem' }}>
+            <a href="https://github.com/ghost-412" target="_blank" rel="noreferrer" style={{ color: '#A78BFA', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.25rem', fontSize: '0.95rem' }}>
               View Repository <ExternalLink size={16} />
             </a>
           </div>
           <p style={{ color: '#9CA3AF', margin: 0, lineHeight: '1.6' }}>
-            A comprehensive backend environment running a Python Flask application tracking localized workspace deployments. Backed by a fully functional automated pipeline leveraging GitHub Actions with secure token scope isolation to validate structural compilation and deploy to target cloud runtimes.
+            A comprehensive machine learning operations web application engineered for detailed dataset health profiling and data drift monitoring. Built with Streamlit in a Python environment, featuring a top-mounted interactive navigation toggle (🩺 for DataDoc / 🎯 for Caliber) to seamlessly transition between statistical data profiling and standard engineering frameworks.
           </p>
           <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginTop: '0.5rem' }}>
-            {['Flask', 'Git', 'GitHub Actions', 'Linux/WSL'].map((tech) => (
+            {['Streamlit', 'Python 3.8', 'Pandas', 'Data Drift', 'WSL'].map((tech) => (
               <span key={tech} style={{ fontSize: '0.85rem', color: '#9CA3AF', backgroundColor: '#141226', padding: '0.25rem 0.5rem', borderRadius: '0.25rem', border: '1px solid #231E39' }}>{tech}</span>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Footer */}
       <footer style={{ borderTop: '1px solid #231E39', padding: '2.5rem 2rem', textAlign: 'center', backgroundColor: '#0F0E1C', color: '#6B7280', fontSize: '0.9rem' }}>
         <p style={{ margin: '0 0 1rem 0' }}>Built from scratch with React & Vite inside WSL.</p>
         <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem' }}>
